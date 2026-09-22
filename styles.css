@@ -14,7 +14,7 @@ a:focus-visible,button:focus-visible,input:focus-visible { outline:1px solid cur
 .intro { position:absolute; z-index:1; top:13.5%; left:3.2vw; max-width:13rem; font-size:clamp(.95rem,1.25vw,1.15rem); }
 .intro p { margin:0 0 1.35rem; }
 .program-lead { display:grid; grid-template-columns:minmax(190px,1fr) 3fr; gap:2rem; min-height:62vh; padding:34px 3.2vw 80px; border-top:1px solid var(--ink); }
-.section-label { margin:0; font-size:.82rem; text-transform:uppercase; letter-spacing:.06em; }
+.section-label { width:max-content; margin:0; padding-bottom:3px; border-bottom:1px solid currentColor; font-family:"Murecho",sans-serif; font-size:.76rem; font-weight:300; line-height:1.2; text-transform:uppercase; letter-spacing:.06em; }
 .program-lead h1 { max-width:11ch; margin:-.12em 0 1.5rem; font-size:clamp(3rem,7vw,7.5rem); font-weight:400; line-height:.88; letter-spacing:-.045em; }
 .program-lead>div>p { max-width:39rem; font-size:1.15rem; line-height:1.25; }
 .index-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); }
