@@ -12,7 +12,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Murecho", sans-serif;
   font-size: 16px;
   line-height: 1.45;
 }
@@ -32,17 +32,17 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 }
 .wordmark {
   width: max-content;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Murecho", sans-serif;
   font-size: clamp(2rem, 3.1vw, 3.6rem);
-  font-weight: 400;
+  font-weight: 100;
   line-height: .9;
-  letter-spacing: -.045em;
+  letter-spacing: 0.01em;
 }
 .site-nav { display: flex; gap: clamp(1.25rem, 3vw, 3.25rem); }
 .site-nav a, .menu-toggle {
   position: relative;
   font-size: .86rem;
-  font-weight: 500;
+  font-weight: 100;
 }
 .site-nav a::after, .footer-links a::after {
   content: "";
@@ -71,7 +71,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   align-items: baseline;
   padding: 14px 0 2px;
 }
-.feature-caption p, .feature-caption h1 { margin: 0; font-size: .84rem; font-weight: 400; }
+.feature-caption p, .feature-caption h1 { margin: 0; font-size: .84rem; font-weight: 100; }
 .feature-caption h1 { text-align: center; }
 .feature-caption > :last-child { text-align: right; }
 .eyebrow { text-transform: uppercase; letter-spacing: .08em; }
@@ -95,7 +95,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   border-top: 1px solid var(--line);
 }
 .site-footer p { margin: 0; }
-.footer-name { font-family: "Cormorant Garamond", serif; font-size: 2rem; line-height: 1; letter-spacing: -.035em; }
+.footer-name { font-family: "Murecho", sans-serif; font-size: 2rem; line-height: 1; letter-spacing: 0.01em; }
 .footer-links { display: flex; flex-direction: column; align-items: flex-start; gap: .6rem; }
 .footer-links a { position: relative; }
 
