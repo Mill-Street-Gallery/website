@@ -1,14 +1,10 @@
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.site-nav');
-
-toggle.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', String(open));
-  toggle.textContent = open ? 'Close' : 'Menu';
-});
-
-nav.addEventListener('click', () => {
-  nav.classList.remove('open');
-  toggle.setAttribute('aria-expanded', 'false');
-  toggle.textContent = 'Menu';
-});
+const toggle=document.querySelector('.menu-toggle');
+const nav=document.querySelector('.site-nav');
+const dialog=document.querySelector('.mailing-dialog');
+const mailingForm=document.querySelector('#mailing-form');
+toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'Close':'Menu'});
+nav.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='Menu'});
+document.querySelector('[data-open-mailing]').addEventListener('click',()=>dialog.showModal());
+document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
+mailingForm.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(mailingForm);const subject=encodeURIComponent('Mill Street Gallery mailing list');const body=encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\nProfession: ${data.get('profession')||''}\nCity: ${data.get('city')||''}`);window.location.href=`mailto:info@millstreetgallery.org?subject=${subject}&body=${body}`});
